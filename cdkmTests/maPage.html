@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ici mes trests </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">
+
+    </script>
 </head>
 <body>
+    <div>
+        <form>
+            <h1> Petit formulaire de test</h1>
+            Nom:
+            <input type="text" placeholder="enter your family name " ng-model="namePerson" onresize="10">
 
+            <input type="text" placeholder="enter your first name " ng-model="prenomPerson" onresize="10">
+            {{namePerson + " " +prenomPerson}}
+
+            <input type="submit" class="bt" name="valider" value="valider">
+
+        </form>
+        <br/>
+
+        <button ng-click="count = count + 1 " ng-init = "count = 0">
+          {{count}}  Incrementer
+        </button>
+        <!--<button ng-click ="myCtrl.inc()">
+            {{count}}  Increment
+        </button>-->
+        <br/>
+
+
+        <h2>La calculatrice test</h2>
+
+        <tbody>
+            <tr>
+                <td>
+                    <button ng-click="count1 = count + 2 " ng-init = "count = 0">{{count1}}  Incrementer</button>
+                    <button ng-click="count2 = count + 5 " ng-init = "count = 0">{{count2}}  Incrementer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button ng-click="count = count + 1 " ng-init = "count = 0">{{count}}  Incrementer</button>
+                    <button ng-click="count = count + 1 " ng-init = "count = 0">{{count}}  Incrementer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button ng-click="count = count + 1 " ng-init = "count = 0">{{count}}  Incrementer</button>
+                    <button ng-click="count = count + 1 " ng-init = "count = 0">{{count}}  Incrementer</button>
+                    <button ng-disabled="{{isButtonDisabled()}}" > >Click me coucou</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </div>
 </body>
 </html>

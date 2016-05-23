@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>NG01 Exercice de bon de commande</title>
+    <script src="todo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 </head>
 <body>
 
+
+
+
+
+
+    <!-- creation du tableau-->
+
+    <table border = 1 >
+        <tr>
+            <td>référence article</td>
+            <td>libellé</td>
+            <td>prix unitaire HT</td>
+            <td>quantité</td>
+            <td>montant HT</td>
+            <td>montant TTC</td>
+        </tr>
+        <tr>
+            <td> NG01   </td>
+            <td>NGhjkhjk</td>
+            <td><input ng-model ="prixUnit" ng-init = "prixUnit = 20 "></td>
+            <td><input ng-model ="quantite"></td>
+            <td>{{quantite * prixUnit}}</td>
+            <td>{{quantite * prixUnit * tva}}</td>
+        </tr>
+    </table>
 </body>
 </html>
