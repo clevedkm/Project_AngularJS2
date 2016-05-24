@@ -11,7 +11,7 @@ angular.module('bonCommande', [])
 
     //ajout des operation de calcul des montant en HT et TTC
         //bonCom.calculerMontantHT = function(){
-           /// var tva = 0.19;
+           //// var tva = 0.19;
             //var montantHT = 10 ;//bonCom.prix_unitaire_HT * bonCom.quantite;
             //return 0;// bonCom.prix_unitaire_HT;// * bonCom.quantite;
        // };
