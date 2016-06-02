@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-lg-6">
+		<h2>DEALERS LIST</h2>	
+	</div>
+
+	<div class="col-lg-3">
+		 <input class="form-control" ng-model="searchText" placeholder = "search">
+</div>
+</div>
+ <table  class="table table-striped table-bordered">
+ 	<thead>
+      <tr>
+        <th>#Tiers</th>
+        <th>Name</th>
+        <th>Convention</th>
+        <th>All</th>
+        <th>None</th>
+        <th>Custom</th>
+      </tr>
+    </thead>
+  <tr ui-form-parametrage-dealer dealer="dealer" ng-repeat="dealer in dealerList | filter:searchText">
+  </tr>
+</table>
+
+<button type="button" ng-csv="paysCSV" csv-header="getHeader()" filename="pays.csv" class="btn-danger">Export</button>
+ 

@@ -1,0 +1,118 @@
+<div class="container">
+  <div class="row">
+    <div> <h3 ng-click="goToParametragePays()">  BACK TO DEALERS LIST</h3></div> 
+    <div class="col-lg-3">
+      <div class="col-lg-12" style = "border-style: solid;
+    line-height: 8; background-color: #945194"><h4> # {{paysSelecetd.nom}} </h4></div>
+      <div class="row">
+        <div class="col-lg-4"><button type="button" class="btn btn-default" ng-click="clickAll()">ALL</button></div>
+        <div class="col-lg-4"> <button type="button" class="btn btn-default" ng-click="clickNone()">None</button></div>
+        <div class="col-lg-4"> <button type="button" class="btn btn-default" ng-click="clickCustom()">Custom</button></div>
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+    	<div class="panel-group">
+    		<!-- DEMAND PANNEL -->
+    		<div class="panel panel-default">
+    			<div class="panel-heading">
+    				<div class="row" >
+    					<div class="col-md-6">
+    						<h4 class="panel-title">
+    							<a ng-click="selectDemand()">DEMAND</a>
+      			  	   		</h4>
+    					</div>
+    					<div class="col-md-6">
+      			  	   	  <div class="col-md-6">
+                          <switch id="enabled" name="demand" ng-model="demand" class="green" ng-change="changeDemand"></switch>
+                          <br>{{ demand }}
+                      </div>
+
+      			  	   </div>
+      			  	</div>
+    			</div>
+    			<div class="panel-body" ng-show="showDemand">
+    				<div class="row" >
+    					<div class="col-md-6">
+                <h3>Demand in study</h3>
+                <p>Alerte dossier en attente de décision par BPLS</p>
+              </div>
+
+    					<div class="col-md-6">
+                <switch id="enabled" name="demandInStudy" ng-model="demandInStudy" class="green" ng-change="changeDis"></switch>
+              </div>
+    					<!-- <div class="col-md-6">{{paysSelecetd.customObject.demande.demandeStudy}}</div> -->
+        			</div> 
+        			</br>
+        			<div class="row">
+            		  <div class="col-md-6">
+                    <h3>Demand in study + Documents needed</h3>
+                    <p>BPLS informe le partenaire qu'il doit fournir un ou des documents pour la décision</p>
+                  </div>
+            			<div class="col-md-6">
+                    <switch id="enabled" name="demandDocNeeded" ng-model="demandDocNeeded" class="green" ng-change="changeDemandDocNeeded"></switch>
+                  </div>
+       				</div> 
+     			</div>
+			</div>
+
+			<!-- DECISION PANNEL -->
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="row" >
+              <div class="col-md-6">
+                <h4 class="panel-title">
+                  <a ng-click="selectDecision()">DECISION</a>
+                      </h4>
+              </div>
+              <div class="col-md-6">
+                      <div class="col-md-6">
+                          <switch id="enabled" name="decision" ng-model="decision" class="green" ng-change="changeDecision"></switch>
+                          <br>{{ decision }}
+                      </div>
+
+                   </div>
+                </div>
+          </div>
+          <div class="panel-body" ng-show="showDecision">
+            <div class="row" >
+              <div class="col-md-6">
+                <h3>Demand refused</h3>
+                <p>Alerte demande refusée</p>
+              </div>
+
+              <div class="col-md-6">
+                <switch id="enabled" name="demandRefusee" ng-model="demandRefusee" class="green" ng-change="changeDemandeRefusee"></switch>
+              </div>
+              <!-- <div class="col-md-6">{{paysSelecetd.customObject.demande.demandeStudy}}</div> -->
+              </div> 
+              </br>
+              <div class="row">
+                  <div class="col-md-6">
+                    <h3>Demand approved</h3>
+                    <p>Alerte demande accéptée</p>
+                  </div>
+                  <div class="col-md-6">
+                    <switch id="enabled" name="demandAcceptee" ng-model="demandAcceptee" class="green" ng-change="changeDemandAcceptee"></switch>
+                  </div>
+              </div>
+              </br>
+              <div class="row">
+                  <div class="col-md-6">
+                    <h3>Approval with conditions</h3>
+                    <p>Alerte demande accéptée sous conditions</p>
+                  </div>
+                  <div class="col-md-6">
+                    <switch id="enabled" name="demandAccepteeCond" ng-model="demandAccepteeCond" class="green" ng-change="changeDemandAccepteeCond"></switch>
+                  </div>
+              </div>  
+          </div>
+      </div>
+
+
+			<!-- DOCUMENTATION MANAGEMENT PANNEL -->
+		</div>
+    </div>
+  </div>
+</div>
+ 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	
+	<title></title>
+	
+	<link href="lib/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+
+	<link href="lib/angular-ui-switch-master/css/angular-ui-switch.min.css" rel="stylesheet" />
+	
+	<!-- bootstrap/angularjs js -->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-animate.js"></script>
+
+	<script src="lib/angular-ui/angular-ui-router.js"></script>
+
+	<script src="lib/angular-ui/angular-ui-router.js"></script>
+	<script src="lib/angular/angular-sanitize.min.js"></script>
+	<script src="lib/csv/ng-csv.js"></script>
+	<script src="lib/angular/ngCookies.js"></script>
+
+	<script src="lib/jquery/jquery-1.12.1.min.js"></script>
+	<script src="lib/bootstrapSwitch/js/bootstrap-switch.min.js"></script>
+
+	
+	<script src="lib/angular-ui-switch-master/js/angular-ui-switch.min.js"></script>
+
+	
+	
+   
+	<!-- your app's js -->
+	<script src="app.js"></script>
+
+
+<!-- page (route) -->
+	<script type="text/javascript" src="page.parametragePays/loader.js"></script>
+	<script type="text/javascript" src="page.parametragePays/config.js"></script>
+	<script type="text/javascript" src="page.parametragePays/controller.js"></script>
+
+	<script type="text/javascript" src="page.parametrageDealers/loader.js"></script>
+	<script type="text/javascript" src="page.parametrageDealers/config.js"></script>
+	<script type="text/javascript" src="page.parametrageDealers/controller.js"></script>
+
+	<script type="text/javascript" src="page.editPays/loader.js"></script>
+	<script type="text/javascript" src="page.editPays/config.js"></script>
+	<script type="text/javascript" src="page.editPays/controller.js"></script>
+	<script type="text/javascript" src="page.editPays/directive.js"></script>
+
+	<script type="text/javascript" src="page.editDealer/loader.js"></script>
+	<script type="text/javascript" src="page.editDealer/config.js"></script>
+	<script type="text/javascript" src="page.editDealer/controller.js"></script>
+
+<!-- ui (directive) -->
+
+    <script type="text/javascript" src="ui.form.parametragePays/loader.js"></script>
+	<script type="text/javascript" src="ui.form.parametragePays/directive.js"></script>
+	<script type="text/javascript" src="ui.form.parametragePays/controller.js"></script>
+
+	<script type="text/javascript" src="ui.form.editPays/loader.js"></script>
+	<script type="text/javascript" src="ui.form.editPays/directive.js"></script>
+	<script type="text/javascript" src="ui.form.editPays/controller.js"></script>
+
+	<script type="text/javascript" src="ui.form.parametrageDealers/loader.js"></script>
+	<script type="text/javascript" src="ui.form.parametrageDealers/directive.js"></script>
+	<script type="text/javascript" src="ui.form.parametrageDealers/controller.js"></script>
+
+</head>
+<body ng-app="bnp-poc" >
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="images/bnpLogo.jpg" style="height: auto; width: auto; max-width: 190px; max-height: 220px;">  
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a>Business is ON</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="mainContent">
+	<ui-view></ui-view>
+</div>
+
+
+</body>
+</html>

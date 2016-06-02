@@ -1,0 +1,17 @@
+<tr>
+   <td>{{ dealer.tiers }}</td>
+   <td>{{ dealer.nom }}</td>
+   <td>{{ dealer.convention }}</td>
+   <td ng-if="showAll"> <span class="glyphicon glyphicon-ok"></span></td>
+   <td ng-if="!showAll"> <span class="glyphicon glyphicon-plus" ng-click="clickAll()"></span></td>
+
+
+   <td ng-if="showNone"> <span class="glyphicon glyphicon-ok"></span></td>
+   <td ng-if="!showNone"> <span class="glyphicon glyphicon-plus" ng-click="clickNone()"></span></td>
+
+   
+   <td ng-if="showCustom"> <span class="glyphicon glyphicon-ok"></span></td>
+   <td ng-if="!showCustom"> <span class="glyphicon glyphicon-plus" ng-click="clickCustom()"></span></td>
+   <td ng-if="	showCustom"> <button type="button" class="btn btn-default" ng-click="goToEditDealer()">edit</button></td>
+</tr>
+	
