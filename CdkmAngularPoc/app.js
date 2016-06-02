@@ -9,6 +9,7 @@ angular.module('bnp-poc', ['ui.router',
 	'page.parametrageDealers',
 	'page.editDealer'])
 
+
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
 	// pour désactiver requêtes options de merde
