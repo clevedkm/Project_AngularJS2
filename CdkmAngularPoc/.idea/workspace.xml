@@ -20,6 +20,7 @@
     <favorites_list name="BnpPoc" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
@@ -122,6 +123,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600" />
+>>>>>>> BR_ECRAN_010616
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
