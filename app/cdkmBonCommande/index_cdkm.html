@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bonCommande">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau du bon de commande</title>
+    <script src="angular.min.js"></script>
+    <script src="../cdkmBonCommandejs/initArticle_cdkm.js"></script>
+</head>
+<body>
+<!-- exercice 1.	Tableau du bon de commande -->
+<h4>NG01 : Exercice “Bon de commande”: Tableau du bon de commande </h4>
+<div ng-controller = "BonCommandeCtrl as bonComCrtl">
+    <style type="text/css">
+        table tbody tr:nth-child(odd) { background-color: #C0C0FF }
+        tr.big td {font-weight: bold; }
+    </style>
+
+    <table border="1" ng-model="bonCom">
+        <tbody>
+
+        <tr>
+            <td> référence article</td>
+            <td> libellé</td>
+            <td> prix unitaire HT</td>
+            <td> quantité</td>
+            <td> montant HT</td>
+            <td> montant TTC</td>
+        </tr>
+
+
+            <tr ng-repeat="bonCom in bonComCrtl.bonComs">
+                <td>{{bonCom.reference_article}}</td>
+                <td>{{bonCom.libelle}}</td>
+                <td>{{bonCom.prix_unitaire_HT}}</td>
+                <td><input type="text" ng-model ="quantiteValeur" ng-init ="quantiteValeur = 1" placeholder="quantite" size="5" ></td>
+                <td>{{quantiteValeur * bonCom.prix_unitaire_HT}} €</td>
+                <td>{{quantiteValeur * bonCom.prix_unitaire_HT * 1.19 | number : 2}}  €</td>
+            </tr>
+
+            <tr>
+               <td colspan="6" align="center" bgcolor="CCFF00"> version avec un fonction</td>
+            </tr>
+            <tr.big>
+                <td font="bold">sdgsdfg</td>
+                <tr ng-repeat="bonCom in bonComCrtl.bonComs">
+                     <td>{{bonCom.reference_article}}</td>
+                     <td>{{bonCom.libelle}}</td>
+                     <td>{{bonCom.prix_unitaire_HT}}</td>
+                     <td><input type="text" ng-model ="quantiteValeur" ng-init ="quantiteValeur = 1" placeholder="quantite" size="5" ></td>
+                     <td>{{bonComCrtl.calculerMontantHT(bonCom.prix_unitaire_HT,quantiteValeur) | currency}} </td>
+                     <td>{{bonComCrtl.calculerMontantTTC(bonCom.prix_unitaire_HT,quantiteValeur) | currency:"&euro;"}}</td>
+
+                </tr>
+            </tr.big>
+          </tbody>
+    </table>
+           <br/><br>
+
+
+        <div>
+            <h3>Ajouter d'un article</h3>
+            <form>
+                <input type="text" name="reference" placeholder="référence">
+                <input type="text" name="libelle" placeholder="libellé de l’article">
+                <input type="text" name="quantite" placeholder="la quantité">
+                <input type="text" name="prix_unitaire"  placeholder="le prix unitaire HT">
+                <button type="submit" name="btAjout"> Ajouter</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>suppression d'un article</h3>
+        </div>
+
+</div>
+
+</body>
+</html>
